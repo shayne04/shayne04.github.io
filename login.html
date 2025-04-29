@@ -65,7 +65,7 @@
   
       if (storedUser && emailInput === storedUser.email && passwordInput === storedUser.password) {
         sessionStorage.setItem('loggedInUser', JSON.stringify(storedUser));
-        window.location.href = 'profile.html';
+        window.location.href = 'Profile.html';
       } else {
         alert('Invalid email or password!');
       }
