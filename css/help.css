@@ -1,4 +1,4 @@
-/* General */
+
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +17,6 @@
     text-decoration: underline;
   }
 
-  /* Header */
   .header {
     display: flex;
     justify-content: space-between;
@@ -47,8 +46,7 @@
   .nav-links a:hover {
     color: #da9898;
   }
-  
-  /* Hamburger */
+ 
   .hamburger {
     display: none;
     font-size: 28px;
@@ -56,7 +54,6 @@
     color: #e89c92;
   }
   
-  /* Hero Section */
   .hero {
     background: linear-gradient(to bottom, #f3cdd3, #ffffff);
     padding: 80px 20px;
@@ -73,8 +70,7 @@
     font-size: 18px;
     color: #333;
   }
-  
-  /* Support Cards */
+
   .support-cards {
     display: flex;
     flex-wrap: wrap;
@@ -131,7 +127,6 @@
     background: #da9898;
   }
   
-  /* Hotlines Section */
   .hotlines {
     background: #f3cdd3;
     padding: 60px 20px;
@@ -205,8 +200,7 @@
     background: #f3cdd3;
     color: #000000;
   }
-  
-  /* Footer */
+ 
   .footer {
     background-color: #F2B3A8;
     color: #fff;
@@ -245,7 +239,7 @@
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
-    gap: 30px; /* More even spacing between items */
+    gap: 30px; 
   }
   
   .footer-nav li {
@@ -279,8 +273,7 @@
     opacity: 1;
     transform: translateY(0);
   }
-  
-  /* Responsive */
+
   @media (max-width: 768px) {
     .nav-links {
       display: none;

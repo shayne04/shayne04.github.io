@@ -176,8 +176,7 @@ body {
     background: #f3cdd3;
     color: #000000;
   }
-  
-  /* Footer */
+
   .footer {
     background-color: #F2B3A8;
     color: #fff;
@@ -216,7 +215,7 @@ body {
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
-    gap: 30px; /* More even spacing between items */
+    gap: 30px; 
   }
   
   .footer-nav li {
@@ -251,7 +250,6 @@ body {
     transform: translateY(0);
   }
 
-  /* Add this at the bottom of your CSS file */
 @media (max-width: 1024px) {
     .contact-container {
       flex-direction: column;

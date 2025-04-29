@@ -16,7 +16,7 @@ body {
   font-weight: bold;
   text-decoration: underline;
 }
-/* Header */
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -43,8 +43,6 @@ body {
   text-decoration: underline;
 }
 
-
-/* Hero Section */
 .hero-home {
   background: linear-gradient(to bottom, #F2E0EA 0%, #ffffff 50%);
   text-align: center;
@@ -121,7 +119,6 @@ body {
   border-radius: 5px;
 }
 
-/* Features Section */
 .features {
   background: #ffffff;
   padding: 60px 20px;
@@ -176,7 +173,6 @@ body {
   color: #da9898;
 }
 
-/* Self-Care Tips */
 .selfcare-tips {
   background: #fef6f5;
   padding: 60px 20px;
@@ -219,7 +215,6 @@ body {
   color: #333;
 }
 
-/* Featured Articles */
 .featured-articles {
   background: #ffffff;
   padding: 60px 20px;
@@ -271,7 +266,6 @@ body {
   color: #666;
 }
 
-/* Fun Facts */
 .fun-facts {
   background: #f5e9eb;
   padding: 60px 20px;
@@ -335,7 +329,6 @@ body {
   color: #000000;
 }
 
-/* Footer */
 .footer {
   background-color: #F2B3A8;
   color: #fff;
@@ -374,7 +367,7 @@ body {
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
-  gap: 30px; /* More even spacing between items */
+  gap: 30px; 
 }
 
 .footer-nav li {
@@ -409,7 +402,6 @@ body {
   transform: translateY(0);
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .about-container, .feature-cards, .tips-cards, .articles-cards {
     flex-direction: column;
