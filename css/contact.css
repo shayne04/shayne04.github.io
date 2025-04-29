@@ -43,6 +43,23 @@ body {
     text-decoration: underline;
   }
 
+  .hero {
+    background: linear-gradient(to bottom, #f3cdd3, #ffffff);
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #000000;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    color: #333;
+  }
+
   .contact-us {
     background: #fff;
     padding: 50px 20px;

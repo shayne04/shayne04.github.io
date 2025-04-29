@@ -161,27 +161,25 @@ body {
 /* Subscribe Section */
 .subscribe {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  padding: 10px, 10px;
+  text-align: left; 
+  height: 80px;
   margin-bottom: 30px;
 }
 
 .subscribe h3 {
   font-size: 28px;
   color: #333;
-  margin-bottom: 20px;
-  flex: 1 1 100%;
-  text-align: center;
+  margin-bottom: 20px; 
+  margin-left: 30px;
+  flex-wrap: wrap;
 }
 
 .subscribe-form {
+  margin-left: 120px;
   display: flex;
   gap: 15px;
   align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .subscribe-form input {
@@ -280,73 +278,4 @@ body {
 .fade-in.appear {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* --- MEDIA QUERIES --- */
-@media (max-width: 992px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-text, .about-image {
-    flex: 1 1 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .about-banner h1 {
-    font-size: 28px;
-  }
-
-  .mv-box h2 {
-    font-size: 24px;
-  }
-
-  .mv-box p {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  .header {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .logo img {
-    width: 50px;
-  }
-
-  .about-banner {
-    padding: 40px 15px;
-  }
-
-  .about-banner h1 {
-    font-size: 24px;
-  }
-
-  .subscribe-form input {
-    width: 100%;
-  }
-
-  .subscribe-form {
-    flex-direction: column;
-  }
-
-  .footer-nav {
-    flex-direction: column;
-    gap: 10px;
-  }
 }
