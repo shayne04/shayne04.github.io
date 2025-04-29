@@ -1,0 +1,141 @@
+<!-- profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Profile | MindCare</title>
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+ 
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+       <img src="images/pink_logo.png" alt="MindCare Logo">
+     </div>
+   
+     <nav class="nav-links" id="nav-links">
+      <a href="homepage.html" id="homeLink">Home</a>
+      <a href="about.html" id="aboutLink">About</a>
+      <a href="resources.html" id="resourceLink">Resources</a>
+      <a href="meditations.html" id="meditationsLink">Meditations</a>
+      <a href="help.html" id="helpLink">Help & Support</a>
+      <a href="contact.html" id="contactLink">Contact</a>
+      <a href="Profile.html" id="profileLink">Profile</a>
+    </nav>
+   </div>
+
+
+<div class="profile-page fade-in">
+    <div class="profile-box">
+      <div class="profile-left">
+        <div class="img-wrapper">
+          <img src="images/profile.jpg" alt="Profile" />
+        </div>
+      </div>
+      <div class="profile-right">
+        <p><strong>Name:</strong> <span id="full-name">User name</span></p>
+        <p><strong>Email:</strong> <span id="email">email@example.com</span></p>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="footer fade-in">
+    <div class="subscribe">
+      <h3>Stay updated with<br>the latest info</h3>
+      <form class="subscribe-form">
+        <input type="text" placeholder="Fullname" required>
+        <input type="email" placeholder="Email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  
+    <hr>
+  
+    <div class="footer-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-google-plus-g"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  
+    <ul class="footer-nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Resources</a></li>
+      <li><a href="#">Meditation</a></li>
+      <li><a href="#">Help & Support</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  
+    <p>&copy; 2024 MindCare. Your safe space for growth and healing.</p>
+  </footer>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const faders = document.querySelectorAll(".fade-in");
+      const appearOptions = { threshold: 0.2 };
+      const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("appear");
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+    
+      faders.forEach(fader => appearOnScroll.observe(fader));
+    });
+    </script>
+
+  <script>
+    function logout() {
+      sessionStorage.removeItem('loggedInUser');
+      window.location.href = 'login.html';
+    }
+  </script>
+  
+  <script>
+    const user = JSON.parse(sessionStorage.getItem('loggedInUser'));
+    if (user) {
+      document.getElementById('full-name').textContent = user.fullName;
+      document.getElementById('email').textContent = user.email;
+    } else {
+      window.location.href = 'login.html';
+    }
+  </script>
+
+<script>
+  const currentPage = window.location.pathname.split('/').pop();
+
+  switch (currentPage) {
+    case 'homepage.html':
+      document.getElementById('homeLink').classList.add('active');
+      break;
+    case 'about.html':
+      document.getElementById('aboutLink').classList.add('active');
+      break;
+  case 'resources.html':
+      document.getElementById('resourcesLink').classList.add('active');
+      break;
+  case 'meditations.html':
+      document.getElementById('meditationsLink').classList.add('active');
+      break;
+  case 'help.html':
+      document.getElementById('helpLink').classList.add('active');
+      break;
+    case 'contact.html':
+      document.getElementById('contactLink').classList.add('active');
+      break;
+    case 'Profile.html':
+      document.getElementById('profileLink').classList.add('active');
+      break;
+  }
+</script>
+</body>
+</html>

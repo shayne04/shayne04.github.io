@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | MindCare</title>
+  <link rel="stylesheet" href="css/about.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+       <img src="images/pink_logo.png" alt="MindCare Logo">
+     </div>
+   
+     <nav class="nav-links" id="nav-links">
+      <a href="homepage.html" id="homeLink">Home</a>
+      <a href="about.html" id="aboutLink">About</a>
+      <a href="resources.html" id="resourceLink">Resources</a>
+      <a href="meditations.html" id="meditationsLink">Meditations</a>
+      <a href="help.html" id="helpLink">Help & Support</a>
+      <a href="contact.html" id="contactLink">Contact</a>
+      <a href="Profile.html" id="profileLink">Profile</a>
+    </nav>
+   </div>
+ 
+
+  <section class="about-banner fade-in">
+    <h1>Getting to Know Us</h1>
+    <p>Empowering minds. Nurturing well-being.</p>
+  </section>
+
+  <section class="about-info fade-in">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>Our Story</h2>
+        <p>
+          MindCare was founded with a simple but powerful mission: to provide accessible, meaningful, and stigma-free support for mental wellness.
+          We believe that mental health matters just as much as physical health and should be cared for daily.
+        </p>
+        <p>
+          With our curated resources, affirmations, and meditation tools, we’re building a safe space where everyone is welcome—whether you’re healing, growing, or just needing a little daily motivation.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="images/form-submission-7464-teamworkisimportantintheworkplace-desktop-768x432-1606698141-85.jpg" alt="MindCare Team" />
+      </div>
+    </div>
+  </section>
+
+  <section class="mission-vision fade-in">
+    <div class="mv-container">
+      <div class="mv-box">
+        <h2><b>Our Mission</b></h2>
+        <p>To provide accessible, compassionate, and high-quality mental health care to individuals from all walks of life. We are committed to fostering emotional well-being and breaking the stigma surrounding mental health.</p>
+      </div>
+      <div class="mv-box">
+        <h2><b>Our Vision</b></h2>
+        <p>To build a future where mental wellness is prioritized as much as physical health, and where every individual feels empowered, understood, and supported on their mental health journey.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-values fade-in">
+    <h2>What We Value</h2>
+    <div class="card-container">
+      <div class="value-card">
+        <p><strong>Empathy & Support</strong><br>We listen, we care, we support without judgment.</p>
+      </div>
+      <div class="value-card">
+        <p><strong>Accessibility</strong><br>Everyone deserves mental health resources anytime, anywhere.</p>
+      </div>
+      <div class="value-card">
+        <p><strong>Compassionate Healing</strong><br>Healing is a journey—and we’re with you every step of the way.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer fade-in">
+    <div class="subscribe">
+      <h3>Stay updated with<br>the latest info</h3>
+      <form class="subscribe-form">
+        <input type="text" placeholder="Fullname" required>
+        <input type="email" placeholder="Email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  
+    <hr>
+  
+    <div class="footer-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-google-plus-g"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  
+    <ul class="footer-nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Resources</a></li>
+      <li><a href="#">Meditation</a></li>
+      <li><a href="#">Help & Support</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  
+    <p>&copy; 2024 MindCare. Your safe space for growth and healing.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const faders = document.querySelectorAll(".fade-in");
+      const appearOptions = { threshold: 0.2 };
+      const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("appear");
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+    
+      faders.forEach(fader => appearOnScroll.observe(fader));
+    });
+    </script>
+
+    <script>
+      const currentPage = window.location.pathname.split('/').pop();
+    
+      switch (currentPage) {
+        case 'homepage.html':
+          document.getElementById('homeLink').classList.add('active');
+          break;
+        case 'about.html':
+          document.getElementById('aboutLink').classList.add('active');
+          break;
+      case 'resources.html':
+          document.getElementById('resourcesLink').classList.add('active');
+          break;
+      case 'meditations.html':
+          document.getElementById('meditationsLink').classList.add('active');
+          break;
+      case 'help.html':
+          document.getElementById('helpLink').classList.add('active');
+          break;
+        case 'contact.html':
+          document.getElementById('contactLink').classList.add('active');
+          break;
+        case 'profile.html':
+          document.getElementById('profileLink').classList.add('active');
+          break;
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #dbeafe;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+
+.logo img {
+    height: 60px;        
+    width: auto;         
+    vertical-align: middle;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;           
+    padding: 0 15px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.dropdown {
+    display: none;
+    font-size: 16px;
+    position: absolute;
+    background: white;
+    list-style: none;
+    padding: 10px 0;
+    width: 220px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    border-radius: 10px;
+}
+
+.dropdown li {
+    padding: 8px 15px;
+}
+
+.dropdown li:hover {
+    background-color: #74bbf5;
+}
+
+.menu li:hover .dropdown {
+    display: block;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu a {
+    padding: 15px;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.mobile-menu .dropdown {
+    display: none;
+    padding-left: 20px;
+}
+
+.mobile-menu .dropdown a {
+    padding: 10px;
+    display: block;
+}
+
+.material-symbols-rounded {
+    font-family: 'Material Symbols Rounded';
+    font-weight: normal;
+    align-items: center;
+    font-style: normal;
+    font-size: 24px; 
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: 'liga';
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .has-dropdown a {
+    display: flex;        
+    align-items: center;    
+    gap: 0.25rem;           
+  }
+  
+  .material-symbols-rounded {
+    font-size: 1.2em;       
+    margin-left: auto;      
+  }
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+}

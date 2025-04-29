@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MindCare - Login / Sign Up</title>
+  <link rel="stylesheet"  href="sign.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="left-side">
+      <div>
+        <h1>MindCare</h1>
+        <p>A Mental Wellness Hub for Self-Care & Support</p>
+      </div>
+    </div>
+
+    <div class="form-container">
+      <div class="form-wrapper" id="form-wrapper">
+
+        <!-- Login Form -->
+        <form id="login-form">
+          <h2>Login</h2>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Login</button>
+          <div class="toggle-text" onclick="toggleForm()">Don't have an account? <span>Sign Up</span></div>
+        </form>
+
+        <!-- Sign Up Form -->
+        <form id="signup-form">
+          <h2>Sign Up</h2>
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Sign Up</button>
+          <div class="toggle-text" onclick="toggleForm()">Already have an account? <span>Login</span></div>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const formWrapper = document.getElementById('form-wrapper');
+
+    function toggleForm() {
+      if (formWrapper.style.left === "-100%") {
+        formWrapper.style.left = "0";
+      } else {
+        formWrapper.style.left = "-100%";
+      }
+    }
+  </script>
+
+</body>
+</html>
