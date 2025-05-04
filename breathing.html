@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MindCare - Meditations</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/breathing.css"> 
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">
+      <img src="images/pink_logo.png" alt="MindCare Logo">
+    </div>
+    <nav class="nav-links" id="nav-links">
+        <a href="homepage.html" id="homeLink">Home</a>
+        <a href="about.html" id="aboutLink">About</a>
+        <a href="resources.html" id="resourcesLink">Resources</a>
+        <a href="meditations.html" id="meditationsLink">Meditations</a>
+        <a href="help.html" id="helpLink">Help & Support</a>
+        <a href="contact.html" id="contactLink">Contact</a>
+        <a href="Profile.html" id="profileLink">Profile</a>
+      </nav>
+  </div>
+
+  <section class="hero fade-in">
+    <h1>Mindful Meditations</h1>
+    <p>Simple breathing exercises to relax the mind and soothe your nervous system.</p>
+  </section>
+
+  <section class="article-page fade-in">
+    <article class="full-article">
+      <img src="images/Breathwork techniques like 4-7-8 breathing can….jpg" alt="Managing Anxiety" class="article-banner" />
+      <p>Deep and thoughtful breathing exercises help to calm the nervous system and can act as a “reset” in times of unrest. While breathing is an automatic process – meaning our body does it for us without us even having to think about it – the breath has a direct relationship with our thought’s feelings and emotions. Mindful breathing exercises help us to bring awareness to mind-body connection and are shown to help with both relaxation and energy.</p>
+</article>
+</section>
+
+  <div class="section">
+    <h1>Mindful Breathing Exercise</h1>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/wfDTp2GogaQ?si=8zNweaoxDm-BrhFm" 
+              title="YouTube breathing video" allowfullscreen></iframe>
+    </div>
+    <div class="description">
+      <p>This guided breathing meditation will help you ground yourself in the present moment. By focusing your attention on your breath, you can quiet the mind and relax the body. Use this exercise any time you’re feeling anxious, overwhelmed, or simply need a pause.</p>
+      <p>Make sure you're sitting comfortably, away from distractions, and simply follow along with the guide.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h1>Breathing Exercises with Guided Meditation</h1>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/DbDoBzGY3vo?si=hfwO2Zl8FOsRdwjU"
+              title="Mindful Breathing" allowfullscreen></iframe>
+    </div>
+    <div class="description">
+      <p>Only 5 Minutes - Simple and Calm Breathing Exercise with Guided Meditation. When we breathe slower and extend our exhales, this can help us relax into rest and digest mode and support us during moments like panic attacks.</p>
+    </div>
+  </div>
+
+
+<footer class="footer fade-in">
+    <div class="subscribe">
+      <h3>Stay updated with<br>the latest sessions</h3>
+      <form class="subscribe-form">
+        <input type="text" placeholder="Fullname" required>
+        <input type="email" placeholder="Email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <hr>
+
+    <div class="footer-icons">
+      <a href="https://web.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.github.com/"><i class="fab fa-github"></i></a>
+      <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <ul class="footer-nav">
+      <li><a href="homepage.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="meditations.html">Meditation</a></li>
+      <li><a href="help.html">Help & Support</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <p>&copy; 2024 MindCare. Your safe space for growth and healing.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const faders = document.querySelectorAll(".fade-in");
+      const appearOptions = { threshold: 0.2 };
+      const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("appear");
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+    
+      faders.forEach(fader => appearOnScroll.observe(fader));
+    });
+  </script>
+
+  <script>
+    const currentPage = window.location.pathname.split('/').pop();
+    switch (currentPage) {
+      case 'homepage.html':
+        document.getElementById('homeLink').classList.add('active');
+        break;
+      case 'about.html':
+        document.getElementById('aboutLink').classList.add('active');
+        break;
+      case 'resources.html':
+        document.getElementById('resourcesLink').classList.add('active');
+        break;
+      case 'meditations.html':
+        document.getElementById('meditationsLink').classList.add('active');
+        break;
+      case 'help.html':
+        document.getElementById('helpLink').classList.add('active');
+        break;
+      case 'contact.html':
+        document.getElementById('contactLink').classList.add('active');
+        break;
+      case 'profile.html':
+        document.getElementById('profileLink').classList.add('active');
+        break;
+    }
+  </script>
+
+</body>
+</html>
+

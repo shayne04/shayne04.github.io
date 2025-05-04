@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Managing Anxiety 101 | MindCare</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/anxiety.css" />
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+          <img src="images/pink_logo.png" alt="MindCare Logo">
+        </div>
+        <nav class="nav-links" id="nav-links">
+            <a href="homepage.html" id="homeLink">Home</a>
+            <a href="about.html" id="aboutLink">About</a>
+            <a href="resources.html" id="resourcesLink">Resources</a>
+            <a href="meditations.html" id="meditationsLink">Meditations</a>
+            <a href="help.html" id="helpLink">Help & Support</a>
+            <a href="contact.html" id="contactLink">Contact</a>
+            <a href="Profile.html" id="profileLink">Profile</a>
+          </nav>
+    </div>
+
+    <section class="hero fade-in">
+        <h1>Power of Positive Thinking</h1>
+        <p>Change your mindset and embrace a more positive outlook.</p>
+      </section>
+
+  <main class="article-page fade-in">
+    <article class="full-article">
+      <img src="images/8705332490_d5368ea52e_z.jpg" alt="Managing Anxiety" class="article-banner" />
+      <h1>What Is Positive Thinking?</h1>
+      <p>
+        Positive thinking means approaching life's challenges with a positive outlook. It doesn't mean seeing the world through rose-colored lenses by ignoring or glossing over the negative aspects of life.
+        Positive thinking does not necessarily mean avoiding difficult situations. Instead, positive thinking means making the most of potential obstacles, trying to see the best in other people, and viewing yourself and your abilities in a positive light.</p>
+      <h1>Health Benefits of Positive Thinking</h1>
+      <p>In recent years, the so-called "power of positive thinking" has gained a great deal of attention thanks to self-help books such as "The Secret." While these pop-psychology books often tout positive thinking or philosophies like the law of attraction as a sort of psychological panacea, empirical research has found that there are many very real health benefits linked to positive thinking and optimistic attitudes.<br><br>
+        Positive thinking is linked to a wide range of health benefits, including:
+      <ul>
+        <li>Better stress management and coping skills</li>
+        <li>Enhanced psychological health</li>
+        <li>Greater resistance to the common cold</li>
+        <li>Increased physical well-being</li>
+        <li>Longer life span</li>
+        <li>Lower rates of depression</li>
+        <li>Reduced risk of cardiovascular disease-related death</li>
+    </ul></p>
+    </article>  
+  </main>
+
+  <section class="anxiety-causes fade-in">
+    <h1>How to Practice Positive Thinking</h1>
+    <div class="causes-grid">
+      <div class="cause-card">
+        <h3>Notice your thoughts</h3>
+        <p>Start paying attention to the type of thoughts you have each day. If you notice that many of them are negative, make a conscious effort to reframe how you are thinking in a more positive way.</p>
+    </div>
+  
+      <div class="cause-card">
+        <h3>Write in a gratitude journal</h3>
+        <p>Practicing gratitude can have a range of positive benefits and it can help you learn to develop a better outlook. Experiencing grateful thoughts helps people to feel more optimistic.</p>
+        </div>
+        <div class="cause-card">
+        <h3>Use positive self-talk</h3>
+        <p>How you talk to yourself can play an important role in shaping your outlook. Studies have shown that shifting to more positive self-talk can have a positive impact on your emotions and how you respond to stress</p>
+    </div>
+  </section>
+
+  <section class="article-page fade-in">
+    <article class="full-article">
+      <h1>Why is positive thinking important?</h1>
+      <p>Positive thinking is important because it can have a beneficial impact on both physical and mental well-being. People who maintain a more positive outlook on life cope better with stress, have better immunity, and have a lower risk of premature death. Positive thinking also helps promote greater feelings of happiness and overall satisfaction with life.</p>
+     </article>  
+</section>
+
+<footer class="footer fade-in">
+    <div class="subscribe">
+      <h3>Stay updated with<br>the latest info</h3>
+      <form class="subscribe-form">
+        <input type="text" placeholder="Fullname" required>
+        <input type="email" placeholder="Email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  
+    <hr>
+  
+    <div class="footer-icons">
+      <a href="https://web.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.github.com/"><i class="fab fa-github"></i></a>
+      <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+    </div>
+  
+    <ul class="footer-nav">
+      <li><a href="homepage.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="meditations.html">Meditation</a></li>
+      <li><a href="help.html">Help & Support</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  
+    <p>&copy; 2024 MindCare. Your safe space for growth and healing.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const faders = document.querySelectorAll(".fade-in");
+      const appearOptions = { threshold: 0.2 };
+      const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("appear");
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+    
+      faders.forEach(fader => appearOnScroll.observe(fader));
+    });
+    </script>
+
+  <script>
+      const currentPage = window.location.pathname.split('/').pop();
+    
+      switch (currentPage) {
+        case 'homepage.html':
+          document.getElementById('homeLink').classList.add('active');
+          break;
+        case 'about.html':
+          document.getElementById('aboutLink').classList.add('active');
+          break;
+      case 'resources.html':
+          document.getElementById('resourcesLink').classList.add('active');
+          break;
+      case 'meditations.html':
+          document.getElementById('meditationsLink').classList.add('active');
+          break;
+      case 'help.html':
+          document.getElementById('helpLink').classList.add('active');
+          break;
+        case 'contact.html':
+          document.getElementById('contactLink').classList.add('active');
+          break;
+        case 'profile.html':
+          document.getElementById('profileLink').classList.add('active');
+          break;
+      }
+    </script>
+</body>
+</html>

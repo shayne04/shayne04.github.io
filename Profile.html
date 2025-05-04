@@ -94,11 +94,16 @@
     </script>
 
   <script>
-    function logout() {
+     function logout() {
+    const confirmLogout = confirm("Are you sure you want to logout?");
+    if (confirmLogout) {
       sessionStorage.removeItem('loggedInUser');
       window.location.href = 'login.html';
     }
+  }
   </script>
+ 
+  
   
   <script>
     const user = JSON.parse(sessionStorage.getItem('loggedInUser'));

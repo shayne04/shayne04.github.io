@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MindCare - Meditations</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/breathing.css"> 
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">
+      <img src="images/pink_logo.png" alt="MindCare Logo">
+    </div>
+    <nav class="nav-links" id="nav-links">
+        <a href="homepage.html" id="homeLink">Home</a>
+        <a href="about.html" id="aboutLink">About</a>
+        <a href="resources.html" id="resourcesLink">Resources</a>
+        <a href="meditations.html" id="meditationsLink">Meditations</a>
+        <a href="help.html" id="helpLink">Help & Support</a>
+        <a href="contact.html" id="contactLink">Contact</a>
+        <a href="Profile.html" id="profileLink">Profile</a>
+      </nav>
+  </div>
+
+  <section class="hero fade-in">
+    <h1>Gentle Yoga Flow</h1>
+    <p>Light movements that promote flexibility and inner calm, perfect for beginners.</p>
+  </section>
+
+  <section class="article-page fade-in">
+    <article class="full-article">
+      <img src="images/My Mindful Breathing Experiment Changed How I Feel….jpg" alt="Managing Anxiety" class="article-banner" />
+      <p>Yoga can positively affect mental health by reducing stress, anxiety, and depression. It promotes mindfulness, enhances emotional regulation, and improves overall mood through the release of endorphins. Regular practice fosters a sense of calm, increases self-awareness, and encourages a positive outlook on life.</p>
+</article>
+</section>
+
+  <div class="section">
+    <h1>Gentle Yoga for Flexibility & Stress Reduction</h1>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/EvMTrP8eRvM?si=fWxjKWtxuJRBP6NS" title="YouTube yoga video" allowfullscreen></iframe>
+    </div>
+    <div class="description">
+      <p>15 minutes yoga class for flexibility and stress relief. This is a gentle soothing yoga class to help you relax and stretch your body, great for all experience levels.</p>
+      <p>This can be a therapeutic yoga class to do when you're experiencing anxiety and want to ground yourself</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h1>Yoga Stretch for Stress & Anxiety Relief</h1>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/yqeirBfn2j4?si=IdiFBPgzwyxD8G7v"
+              title="Yoga Strecth" allowfullscreen></iframe>
+    </div>
+    <div class="description">
+      <p>Within 15 minutes this video will guide you through consciously chosen positions that not only give you the physical benefits (as flexibility, mobility, tension relief), but also calm you down on an emotional and mental level.</p> </div>
+  </div>
+
+<footer class="footer fade-in">
+    <div class="subscribe">
+      <h3>Stay updated with<br>the latest sessions</h3>
+      <form class="subscribe-form">
+        <input type="text" placeholder="Fullname" required>
+        <input type="email" placeholder="Email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <hr>
+
+    <div class="footer-icons">
+      <a href="https://web.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.github.com/"><i class="fab fa-github"></i></a>
+      <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <ul class="footer-nav">
+      <li><a href="homepage.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="meditations.html">Meditation</a></li>
+      <li><a href="help.html">Help & Support</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <p>&copy; 2024 MindCare. Your safe space for growth and healing.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const faders = document.querySelectorAll(".fade-in");
+      const appearOptions = { threshold: 0.2 };
+      const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("appear");
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+    
+      faders.forEach(fader => appearOnScroll.observe(fader));
+    });
+  </script>
+
+  <script>
+    const currentPage = window.location.pathname.split('/').pop();
+    switch (currentPage) {
+      case 'homepage.html':
+        document.getElementById('homeLink').classList.add('active');
+        break;
+      case 'about.html':
+        document.getElementById('aboutLink').classList.add('active');
+        break;
+      case 'resources.html':
+        document.getElementById('resourcesLink').classList.add('active');
+        break;
+      case 'meditations.html':
+        document.getElementById('meditationsLink').classList.add('active');
+        break;
+      case 'help.html':
+        document.getElementById('helpLink').classList.add('active');
+        break;
+      case 'contact.html':
+        document.getElementById('contactLink').classList.add('active');
+        break;
+      case 'profile.html':
+        document.getElementById('profileLink').classList.add('active');
+        break;
+    }
+  </script>
+
+</body>
+</html>
+

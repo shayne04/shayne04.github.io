@@ -6,7 +6,7 @@
   <title>MindCare - Help & Support</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/help.css">
+  <link rel="stylesheet" href="css/resources.css">
 </head>
 <body>
 
@@ -17,7 +17,7 @@
       <nav class="nav-links" id="nav-links">
           <a href="homepage.html" id="homeLink">Home</a>
           <a href="about.html" id="aboutLink">About</a>
-          <a href="resources.html" id="resourceLink">Resources</a>
+          <a href="resources.html" id="resourcesLink">Resources</a>
           <a href="meditations.html" id="meditationsLink">Meditations</a>
           <a href="help.html" id="helpLink">Help & Support</a>
           <a href="contact.html" id="contactLink">Contact</a>
@@ -29,6 +29,115 @@
       <h1>Explore Our Resources</h1>
       <p>Access our reliable and helpful informations.</p>
     </section>
+
+    <section class="articles-section fade-in">
+      <h2>Featured Articles</h2>
+      <div class="articles-container">
+  
+        <div class="article-card">
+          <img src="images/Anxiety_1200.jpg" alt="Managing Anxiety">
+          <div class="card-content">
+            <h3>Managing Anxiety 101</h3>
+            <p>Learn simple techniques to manage everyday anxiety.</p>
+            <a href="anxiety.html">Read More →</a>
+          </div>
+        </div>
+  
+        <div class="article-card">
+          <img src="images/sleep-scaled.jpg" alt="Importance of Sleep">
+          <div class="card-content">
+            <h3>The Importance of Sleep</h3>
+            <p>Discover how quality sleep improves your mental health.</p>
+            <a href="sleep.html">Read More →</a>
+          </div>
+        </div>
+  
+        <div class="article-card">
+          <img src="images/Sept_When-does-self-love-become-unhealthy.jpg" alt="Self-Love and Acceptance">
+          <div class="card-content">
+            <h3>Self-Love & Acceptance</h3>
+            <p>Start building a kinder relationship with yourself.</p>
+            <a href="selfAcceptance.html">Read More →</a>
+          </div>
+        </div>
+  
+        <div class="article-card">
+          <img src="images/istockphoto-625738384-612x612.jpg" alt="Managing Stress">
+          <div class="card-content">
+            <h3>Managing Stress in Daily Life</h3>
+            <p>Find healthy ways to cope with stress and overwhelm.</p>
+            <a href="stress.html">Read More →</a>
+          </div>
+        </div>
+  
+        <div class="article-card">
+          <img src="images/Mindfulness_for_Students_1410x820-705x410.jpg" alt="Mindfulness">
+          <div class="card-content">
+            <h3>Practicing Mindfulness</h3>
+            <p>Learn mindfulness techniques to calm your mind and body.</p>
+            <a href="mindfulness.html">Read More →</a>
+          </div>
+        </div>
+  
+        <div class="article-card">
+          <img src="images/8705332490_d5368ea52e_z.jpg" alt="Positive Thinking">
+          <div class="card-content">
+            <h3>Power of Positive Thinking</h3>
+            <p>Change your mindset and embrace a more positive outlook.</p>
+            <a href="positive.html">Read More →</a>
+          </div>
+        </div>
+  
+      </div>
+    </section>
+
+    <footer class="footer fade-in">
+      <div class="subscribe">
+        <h3>Stay updated with<br>the latest info</h3>
+        <form class="subscribe-form">
+          <input type="text" placeholder="Fullname" required>
+          <input type="email" placeholder="Email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    
+      <hr>
+    
+      <div class="footer-icons">
+        <a href="https://web.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.github.com/"><i class="fab fa-github"></i></a>
+        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+      </div>
+    
+      <ul class="footer-nav">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="meditations.html">Meditation</a></li>
+        <li><a href="help.html">Help & Support</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    
+      <p>&copy; 2024 MindCare. Your safe space for growth and healing.</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const faders = document.querySelectorAll(".fade-in");
+        const appearOptions = { threshold: 0.2 };
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("appear");
+            observer.unobserve(entry.target);
+          });
+        }, appearOptions);
+      
+        faders.forEach(fader => appearOnScroll.observe(fader));
+      });
+      </script>
   
     <script>
         const currentPage = window.location.pathname.split('/').pop();

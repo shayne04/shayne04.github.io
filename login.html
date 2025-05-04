@@ -71,6 +71,14 @@
       }
     });
   </script>
+
+<script>
+  const loggedInUser = JSON.parse(sessionStorage.getItem('loggedInUser'));
+  if (loggedInUser) {
+    window.location.href = 'Profile.html';
+  }
+</script>
+
  
   
 </body>

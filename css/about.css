@@ -271,3 +271,97 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text, .about-image {
+    flex: 1 1 100%;
+  }
+
+  .subscribe {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 20px;
+  }
+
+  .subscribe-form {
+    margin-left: 0;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .subscribe-form input {
+    width: 100%;
+  }
+
+  .subscribe-form button {
+    width: 100%;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-banner h1 {
+    font-size: 28px;
+  }
+
+  .mv-box h2 {
+    font-size: 22px;
+  }
+
+  .mv-box p {
+    font-size: 14px;
+  }
+
+  .subscribe h3 {
+    font-size: 22px;
+    margin-left: 0;
+  }
+
+  .footer-icons a {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+}
+
+
+
+

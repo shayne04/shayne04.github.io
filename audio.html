@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MindCare - Meditations</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/breathing.css"> 
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">
+      <img src="images/pink_logo.png" alt="MindCare Logo">
+    </div>
+    <nav class="nav-links" id="nav-links">
+        <a href="homepage.html" id="homeLink">Home</a>
+        <a href="about.html" id="aboutLink">About</a>
+        <a href="resources.html" id="resourcesLink">Resources</a>
+        <a href="meditations.html" id="meditationsLink">Meditations</a>
+        <a href="help.html" id="helpLink">Help & Support</a>
+        <a href="contact.html" id="contactLink">Contact</a>
+        <a href="Profile.html" id="profileLink">Profile</a>
+      </nav>
+  </div>
+
+  <section class="hero fade-in">
+    <h1>Nature Soundscapes</h1>
+    <p>Immerse yourself in soothing natural sounds for a break from daily stress.</p>
+  </section>
+
+  <section class="article-page fade-in">
+    <article class="full-article">
+      <img src="images/mujer disfrutando canciones en auriculares vía….jpg" alt="Managing Anxiety" class="article-banner" />
+      <p>Relaxing audio, like calming music or nature sounds, can improve mental health by triggering biochemical responses that reduce stress and promote relaxation. These sounds can influence brainwave activity, activating the parasympathetic nervous system and lowering stress hormones like cortisol. Additionally, music can provide a sense of comfort and emotional release, helping to manage anxiety and depression. </p>
+    </article>
+</section>
+
+  <div class="section">
+    <h1>Soothing Music With Nature Sound</h1>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/G8nNGk6LHaM?si=-br8r39hPtpZJYK8" title="YouTube yoga video" allowfullscreen></iframe>
+    </div>
+    <div class="description">
+      <p>Listening to this relaxing music every day has been proven to be good for your health, nervous system, improves mental performance and reduces mental stress.
+        Enjoy a beautiful melody to ease your thoughts after a busy day at work or end a long day with a good night's sleep. and fuel for a new day full of positive energy .</p>
+    </div>
+  </div>
+
+  <div class="music-section">
+    <h3>Relaxing Music Stress Relief</h3>
+    <div class="music-cards">
+      <div class="music-card">
+        <h4>Dreamy Piano</h4>
+        <audio controls>
+          <source src="audio/Dreamy Piano.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="music-card">
+        <h4>Heal</h4>
+        <audio controls>
+          <source src="audio/Heal [N°171].mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="music-card">
+        <h4>Fall Asleep</h4>
+        <audio controls>
+          <source src="audio/Fall Asleep.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="music-card">
+        <h4>Stress Relief</h4>
+        <audio controls>
+          <source src="audio/Music for Stress Relief.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="music-card">
+        <h4>Tranquil Flow</h4>
+        <audio controls>
+          <source src="audio/Heal [N°171].mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="music-card">
+        <h4>Calm Breeze</h4>
+        <audio controls>
+          <source src="audio/Music for Stress Relief.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </div>
+
+<footer class="footer fade-in">
+    <div class="subscribe">
+      <h3>Stay updated with<br>the latest sessions</h3>
+      <form class="subscribe-form">
+        <input type="text" placeholder="Fullname" required>
+        <input type="email" placeholder="Email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <hr>
+
+    <div class="footer-icons">
+      <a href="https://web.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.github.com/"><i class="fab fa-github"></i></a>
+      <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <ul class="footer-nav">
+      <li><a href="homepage.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="meditations.html">Meditation</a></li>
+      <li><a href="help.html">Help & Support</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <p>&copy; 2024 MindCare. Your safe space for growth and healing.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const faders = document.querySelectorAll(".fade-in");
+      const appearOptions = { threshold: 0.2 };
+      const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("appear");
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+    
+      faders.forEach(fader => appearOnScroll.observe(fader));
+    });
+  </script>
+
+  <script>
+    const currentPage = window.location.pathname.split('/').pop();
+    switch (currentPage) {
+      case 'homepage.html':
+        document.getElementById('homeLink').classList.add('active');
+        break;
+      case 'about.html':
+        document.getElementById('aboutLink').classList.add('active');
+        break;
+      case 'resources.html':
+        document.getElementById('resourcesLink').classList.add('active');
+        break;
+      case 'meditations.html':
+        document.getElementById('meditationsLink').classList.add('active');
+        break;
+      case 'help.html':
+        document.getElementById('helpLink').classList.add('active');
+        break;
+      case 'contact.html':
+        document.getElementById('contactLink').classList.add('active');
+        break;
+      case 'profile.html':
+        document.getElementById('profileLink').classList.add('active');
+        break;
+    }
+  </script>
+
+</body>
+</html>
+
